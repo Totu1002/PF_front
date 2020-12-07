@@ -57,7 +57,7 @@
   width: 100%;
   height: 650px;
   color: #FAFAFA;
-  background-image: url(img/mv2.jpg);
+  background-image: url(../img/mv2.jpg);
   /*background-size: contain;*/
   background-size: cover;
   background-position: center;
@@ -136,13 +136,13 @@
 }
 
 .pj-item:nth-child(1) {
-  background-image: url(img/work.png);
+  background-image: url(../img/work.png);
 }
 .pj-item:nth-child(2) {
-  background-image: url(img/dummy1.jpg);
+  background-image: url(../img/dummy1.jpg);
 }
 .pj-item:nth-child(3) {
-  background-image: url(img/dummy2.jpg);
+  background-image: url(../img/dummy2.jpg);
 }
 /* itemを追加する場合は以下を使用
 .pj-item:nth-child(4) {
@@ -226,7 +226,7 @@
   height: 250px;
   margin: 0 auto;
   border-radius: 50%;
-  background-image: url(img/my-icon1.jpg);
+  background-image: url(../img/my-icon1.jpg);
   background-position: center;
 }
 
@@ -319,6 +319,17 @@ footer {
   font-size: 16px;
   color: #FAFAFA;
   text-align: center;
+}
+
+/* トップに戻るボタン */
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+#back img {
+  width: 50px;
 }
 
 /* ネオンデザイン　テストコード */
@@ -439,7 +450,7 @@ footer {
 
 
   #main-visual {
-  background-image: url(img/mv2.jpg);
+  background-image: url(../img/mv2.jpg);
   background-size: cover;
   text-align: center;
   }
