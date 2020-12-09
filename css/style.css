@@ -13,8 +13,10 @@
 /* header */
 /* ハンバーガーメニュー */
 .logo {
-  height: 70px;
-  float: left;
+  background-image: url(../img/logo3.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
 #menu{
@@ -50,71 +52,6 @@
  display: none;
 }
 
-@media only screen and (max-width: 768px) {
-    #menu li{
-    width: 25%;
-    border-bottom: 1px solid #444;
-  }
-}
-@media only screen and (max-width: 480px) {
-  #menu{
-    display: none;
-  }
-
-  #menu li{
-    width: 100%;
-  }
-
-  #toggle{
-    display: block;
-    position: relative;
-    width: 100%;
-    background: #222;
-  }
-
-  #toggle a{
-    display: block;
-    position: relative;
-    padding: 12px 0 10px;
-    border-bottom: 1px solid #444;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  #toggle:before{
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    background: #fff;
-  }
-
-  #toggle a:before, #toggle a:after{
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    width: 20px;
-    height: 4px;
-    background: #222;
-  }
-
-  #toggle a:before{
-    margin-top: -6px;
-  }
-
-  #toggle a:after{
-    margin-top: 2px;
-  }
-
-}
-
 /* main */
 /* section main-visual */
 #main-visual {
@@ -145,14 +82,12 @@
   width: 100%;
   height: 100%;
   padding-bottom: 90px;
-  /*background-color: #ECEFF1;*/
   background-color: black;
   overflow: hidden;
   color: white;
 }
 
 .heading-title {
-  /*color: #000000;*/
   color: white;
   font-size: 32px;
   margin-bottom: 30px;
@@ -167,23 +102,22 @@
   width: 70px;
   height: 3px;
   margin: 8px auto 0 auto;
-  /*background-color: #EC715F;*/
   background-color: white;
 }
 
 .heading-text {
-  /*color: #000000;*/
   color: white;
   font-size: 16px;
   text-align: center;
   margin-bottom: 30px;
 }
 
-
+/* skills */
 .project {
   width: 920px;
   /*padding: 30px 0 90px 0;*/
   margin: 0 auto;
+  background: #000;
 }
 
 .pj-item {
@@ -193,6 +127,13 @@
   float: left;
   background-size: cover;
   /*background-position: center;*/
+  transition-duration: 0.3s;/* 浮き出すのにかかる時間 */
+}
+
+.pj-item:hover {
+  transform: scale(1.1);  /*画像の拡大率*/
+  transition-duration: 0.3s;  /*変化に掛かる時間*/
+  opacity: 0.6;
 }
 
 .pj-item:nth-child(3n) {
@@ -268,7 +209,6 @@
   width: 100%
   margin: 0 auto;
   padding: 0 0 90px 0;
-  /*background-color: #ECEFF1;*/
   background-color: black;
   overflow: hidden;
 }
@@ -281,8 +221,6 @@
 .left-item {
   width: 50%;
   float: left;
-  /* test */
-  /*background-color: yellow;*/
 }
 
 .profile-img {
@@ -297,8 +235,6 @@
 .right-item {
   width: 50%;
   float: right;
-  /* test */
-  /*background-color: blue;*/
 }
 
 .profile-title {
@@ -322,7 +258,6 @@
   margin: 0 auto;
   padding: 0 0 90px 0;
   overflow: hidden;
-  /*background-color: gray;*/
   background-color: black;
 }
 
@@ -375,7 +310,6 @@ footer {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  /*background-color: #EC715F;*/
   background-color: black;
 }
 
@@ -396,83 +330,16 @@ footer {
   width: 50px;
 }
 
-/* ネオンデザイン　テストコード */
-/*
-.heading-title {
-  display: block;
-  margin: auto;
-  padding: 1rem 1.25rem;
-  font-family: sans-serif;
-  font-size: 1.5rem;
-  text-decoration: none;
-  text-shadow:
-    -2px 4px 4px #091243,
-    0 0 10px #00D0FF,
-    inset 1px 1px 1px white;
-  color: #1FFFFF;
-  border: 2px solid;
-  border-radius: 4px;
-  background-color: transparent;
-  box-shadow:
-    0 1px 2px rgba(0,0,0, 0.6),
-    2px 1px 4px rgba(0,0,0, 0.3),
-    2px 4px 3px rgba(3,0,128, 0.3),
-    0 0 7px 2px rgba(0,208,255, 0.6),
-    inset 0 1px 2px rgba(0,0,0, 0.6),
-    inset 2px 1px 4px rgba(0,0,0, 0.3),
-    inset 2px 4px 3px rgba(3,0,128, 0.3),
-    inset 0 0 7px 2px rgba(0,208,255, 0.6);
-  animation: flickering 5s infinite;
-}
-
-@keyframes flickering {
-  0% {
-    border-color: transparent;
-    opacity: 0.2;
-  }
-
-  2% {
-    border-color: #1FFFFF;
-    opacity: 1;
-  }
-
-  4% {
-    border-color: transparent;
-    opacity: 0.2;
-  }
-
-  8% {
-    border-color: #1FFFFF;
-    opacity: 1;
-  }
-
-  28% {
-    border-color: #1FFFFF;
-    opacity: 1;
-  }
-
-  30% {
-    border-color: transparent;
-    opacity: 0.2;
-  }
-
-  36% {
-    border-color: #1FFFFF;
-    opacity: 1;
-  }
-
-  100% {
-    border-color: #1FFFFF;
-    opacity: 1;
-  }
-}
-*/
-
 @media (max-width: 768px) {
 
   #header {
     height: 50px;
     margin: 0 auto;
+  }
+
+  #menu li{
+    width: 25%;
+    border-bottom: 1px solid #444;
   }
 
   .container {
@@ -530,7 +397,7 @@ footer {
     width: 300px;
   }
   .item1, .item3, .item5 {
-    display: none;
+    /*display: none;*/
   }
 
   .strength-group {
@@ -567,6 +434,65 @@ footer {
   }
 
   .contact-right-item {
+  }
+
+}
+
+@media (max-width: 480px) {
+  #menu{
+    display: none;
+  }
+
+  #menu li{
+    width: 100%;
+  }
+
+  #toggle{
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #222;
+  }
+
+  #toggle a{
+    display: block;
+    position: relative;
+    padding: 12px 0 10px;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #toggle:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    background: #fff;
+  }
+
+  #toggle a:before, #toggle a:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 4px;
+    background: #222;
+  }
+
+  #toggle a:before{
+    margin-top: -6px;
+  }
+
+  #toggle a:after{
+    margin-top: 2px;
   }
 
 }
